@@ -11,18 +11,20 @@ export default function Navigation() {
   return (
     <div>
       <Logo />
-      <li>
-        <Link to="/contact">contact</Link>
-      </li>
-      <li>
-        <Link to="/AboutUs">About Us</Link>
-      </li>
-      <li>
-        <Link to="/Menu">Menu</Link>
-      </li>
-      <li>
-        <Link to="/Order">Order</Link>
-      </li>
+      <div className="navigation">
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
+        <li>
+          <Link to="/AboutUs">About Us</Link>
+        </li>
+        <li>
+          <Link to="/Menu">Menu</Link>
+        </li>
+        <li>
+          <Link to="/Order">Order</Link>
+        </li>
+      </div>
     </div>
   );
 }

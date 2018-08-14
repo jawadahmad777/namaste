@@ -8,10 +8,6 @@ export default class AboutUs extends React.Component {
     super(props);
   }
   render() {
-    return (
-      <div>
-        <p>About Us</p>
-      </div>
-    );
+    return <div>kkkkkkkkk</div>;
   }
 }
