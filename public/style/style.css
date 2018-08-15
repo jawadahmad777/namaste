@@ -1,40 +1,78 @@
 body {
   margin: 0;
 }
-.home {
+/*  /////////////////////////Menu///////////////////////////////////////////////////////////////*/
+h3 {
+  text-align: center;
+}
+form {
+  width: 340px;
+  margin: auto;
+  margin-bottom: 18px;
+}
+form > select {
+  width: 100%;
+  height: 40px;
+  background-color: azure;
+  margin-bottom: 8px;
+  padding: 4px;
+  border: 0.5px solid azure;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="select"] {
+  width: 100%;
+  height: 40px;
+  background-color: azure;
+  margin-bottom: 8px;
+  padding: 4px;
+  border: 0.5px solid azure;
+}
+button {
+  width: 100%;
+  height: 38px;
+  background-color: azure;
+  margin-top: 5px;
+  border: 0.5px solid azure;
+}
+input:focus {
+  background-color: white;
+}
+/*  /////////////////////////Contact///////////////////////////////////////////////////////////////*/
+.contact {
+  width: 90%;
+  margin-top: 5px;
   display: grid;
   grid-template-columns: 1fr;
-  margin-top: 10px;
-  width: 90%;
-  position: absolute;
+  margin-left: 8%;
 }
+.h2 {
+  width: 30%;
+  margin-left: 27%;
+  text-align: center;
+  font-size: 35px;
+}
+/*  /////////////////////////Footer///////////////////////////////////////////////////////////////*/
+.footer {
+  width: 90%;
+  margin-top: 20px;
+}
+
+/*  /////////////////////////Home page Design///////////////////////////////////////////////////////////////*/
 .aboutusimage {
-  position: relative;
-  width: 100%;
+  width: 90%;
   margin-left: 5%;
-  margin-bottom: 20px;
   height: 600px;
   background-image: url("/images/kit1.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
+  border-top-right-radius: 150px;
+  border-bottom-left-radius: 50px;
   opacity: 0.6;
 }
-.aboutusimage > p {
-  text-align: center;
-  width: 12%;
-  height: 20px;
-  border: 3px solid red;
-  border-radius: 99%;
-  margin-left: 44%;
-  margin-top: 300px;
-  color: red;
-}
-.aboutusimage > p > a {
-  text-decoration: none;
-}
-.menuimage {
-  position: relative;
-  width: 100%;
+.ourmenu {
+  width: 90%;
   margin-left: 5%;
   margin-bottom: 20px;
   height: 600px;
@@ -43,28 +81,64 @@ body {
   background-size: 100%;
   opacity: 0.6;
 }
-.menuimage > p {
+.some {
   text-align: center;
   width: 12%;
   height: 20px;
-  border: 3px solid red;
+  border: 2px solid red;
   border-radius: 99%;
-  margin-left: 44%;
-  margin-top: 300px;
   color: red;
+  margin-left: 43%;
+  position: relative;
+  top: -300px;
 }
-.menueimage > p > a {
+.some > a {
   text-decoration: none;
+}
+/* ///////////////////////////////Carousel////////////////////////////////////// */
+.slider {
+  width: 90%;
+  height: 550px;
+}
+.slider > img {
+  width: 100%;
+}
+.ourslider {
+  width: 90%;
+  margin-left: 5%;
+
+  height: 550px;
 }
 
 /* //////////////////////////////////////Navigation Starts//////////////////////////////////// */
+table {
+  width: 90%;
+  text-align: center;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid black;
+}
+td:hover {
+  background-color: darkseagreen;
+}
+th:hover {
+  background-color: darkseagreen;
+}
+
+/*  /////////////////////////////////////////////////////////////////////////////////*/
 .navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   font-size: 22px;
   font-family: serif;
   text-align: center;
   padding: 30px 0;
-  margin-left: 50%;
-  width: 40%;
+  margin-left: 45%;
+  margin-right: 5%;
+  margin-bottom: 30px;
 }
 .navigation li {
   list-style: none;
@@ -88,4 +162,22 @@ body {
   width: 100%;
   height: 100%;
 }
-/* //////////////////////////////////////Navigation ends//////////////////////////////////// */
+/* //////////////////////////////////////Media Screen//////////////////////////////////// */
+@media screen and (max-width: 680px) {
+  .some {
+    margin-top: -190px;
+    width: 17%;
+  }
+  .navigation {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 5%;
+    padding-top: 5px;
+  }
+  .navigation li {
+    border-bottom: 1px solid green;
+  }
+  .logo {
+    display: none;
+  }
+}

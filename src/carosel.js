@@ -10,22 +10,23 @@ export default class Carousel extends Component {
       speed: 2000,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: true
+      autoplay: true,
+      pauseOnFocus: true
     };
     return (
       <div className="carousel">
         <Slider {...settings}>
-          <div>
-            <img src="./images/logo.jpg" />
-          </div>
-          <div>
+          <div className="slider">
             <img src="./images/kit1.jpg" />
           </div>
-          <div>
-            <img src="./images/logo.jpg" />
+          <div className="slider">
+            <img src="./images/kit3.jpg" />
           </div>
-          <div>
-            <img src="./images/kit1.jpg" />
+          <div className="slider">
+            <img src="./images/kit4.jpg" />
+          </div>
+          <div className="slider">
+            <img src="./images/kit6.jpg" />
           </div>
         </Slider>
       </div>
