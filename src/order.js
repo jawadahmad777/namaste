@@ -10,20 +10,25 @@ class Order extends React.Component {
   }
 
   handleChange(e) {
-    this.setState({
-      [e.target.name]: e.target.value
-    });
+    this.setState(
+      {
+        [e.target.name]: e.target.value
+      },
+      () => {
+        console.log(this.state);
+      }
+    );
   }
   handleSubmit(e) {
-    // e.preventDefault();
-    // //AXIOS makes able to make an AJAX work from clint to server///////////
-    // axios.post("/registration", this.state).then(resp => {
-    //   if (resp.data.success) {
-    //     this.setState({
-    //       isLoggedIn: true
-    //     });
-    //   }
-    // });
+    e.preventDefault();
+    //AXIOS makes able to make an AJAX work from clint to server///////////
+    axios.post("/order", this.state).then(resp => {
+      if (resp.data.success) {
+        this.setState({
+          isLoggedIn: true
+        });
+      }
+    });
   }
 
   render() {
@@ -46,13 +51,7 @@ class Order extends React.Component {
             type="email"
           />
           <br />
-          <input
-            onChange={this.handleChange}
-            name="password"
-            placeholder="Password"
-            type="password"
-          />
-          <br />
+
           <input
             onChange={this.handleChange}
             name="address"
@@ -67,17 +66,19 @@ class Order extends React.Component {
             placeholder="Phone"
           />
           <br />
-          <select type="select">
+          <select type="select" onChange={this.handleChange} name="orders">
             <option value="Select">Select Dish</option>
-            <option value="saab">Butter Chicken</option>
-            <option value="mercedes">Tandoori Chicken</option>
-            <option value="audi">Rogan Josh</option>
-            <option value="volvo">Malai Kofta</option>
-            <option value="saab">Checkpea Curry</option>
-            <option value="mercedes">Palak Paneer</option>
-            <option value="audi">Naan</option>
+            <option value="Butter Chicken">Butter Chicken</option>
+            <option value="Tandoori Chicken">Tandoori Chicken</option>
+            <option value="Rogan Josh">Rogan Josh</option>
+            <option value="Malai Kufta">Malai Kofta</option>
+            <option value="Chickpea Curry">Checkpea Curry</option>
+            <option value="Palak Paneer">Palak Paneer</option>
+            <option value="Naan">Naan</option>
+            <option value="Chicken Curry">Checken Curry</option>
           </select>
           <br />
+
           <button type="submit">Order</button>
         </form>
       </div>

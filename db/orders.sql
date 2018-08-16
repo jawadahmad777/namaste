@@ -1,10 +1,11 @@
-DROP TABLE if exists order;
+DROP TABLE if exists orders;
 
-CREATE TABLE order (
+CREATE TABLE orders (
     id SERIAL primary key,
     name VARCHAR(255) not null,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    hashed_password VARCHAR(255) NOT NULL,
+    menu_id integer references menu(id),
+    email VARCHAR(255) NOT NULL,
+
     address VARCHAR(255) NOT NULL,
     phone VARCHAR(255) NOT NULL,
     create_at timestamp default CURRENT_TIMESTAMP
