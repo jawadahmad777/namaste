@@ -36,7 +36,7 @@ app.post("/order", (req, res) => {
   db.orders(
     req.body.name,
     req.body.email,
-    req.body.password,
+
     req.body.address,
     req.body.phone
   )
@@ -83,7 +83,7 @@ app.post("/order", (req, res) => {
   db.orders(
     req.body.name,
     req.body.email,
-    req.body.password,
+
     req.body.address,
     req.body.phone
   )

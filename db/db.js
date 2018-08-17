@@ -6,11 +6,11 @@ if (process.env.DATABASE_URL) {
   db = spicedPg("postgres:postgres:postgres@localhost:5432/namaste");
 }
 //////////////////////////////////////////////////////////////////////
-exports.orders = function(name, email, password, address, phone) {
+exports.orders = function(name, email, address, phone) {
   const query =
-    "INSERT INTO orders (name, email, hashed_password, address, phone) VALUES ($1, $2 ,$3, $4, $5) RETURNING *";
+    "INSERT INTO orders (name, email,address, phone) VALUES ($1, $2 ,$3, $4) RETURNING *";
 
-  const params = [name, email, password, address, phone];
+  const params = [name, email, address, phone];
   return db.query(query, params).then(results => {
     return results.rows[0];
   });

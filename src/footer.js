@@ -11,13 +11,13 @@ export default class Footer extends React.Component {
       <div className="footer">
         <h3>Follow us</h3>
         <p>
-          <Link to="">Facebook</Link>
+          <Link to="https://www.facebook.com/">Facebook</Link>
         </p>
         <p>
           <Link to="">Instagram</Link>
         </p>
         <p>
-          <Link to="">Menu</Link>
+          <Link to="">rahimmamondA@gmail.com</Link>
         </p>
       </div>
     );

@@ -31,7 +31,7 @@ export default class Contact extends React.Component {
 
           <iframe
             style={{
-              width: "90%",
+              width: "100%",
               height: "450px",
               frameBorder: "0"
             }}

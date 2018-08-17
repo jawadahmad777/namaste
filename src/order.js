@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "./axios";
 import { BrowserRouter, Route } from "react-router-dom";
+import Footer from "./footer";
+
 class Order extends React.Component {
   constructor() {
     super();
@@ -13,19 +15,20 @@ class Order extends React.Component {
     this.setState(
       {
         [e.target.name]: e.target.value
-      },
-      () => {
-        console.log(this.state);
       }
+      // () => {
+      //   console.log(this.state);
+      // }
     );
   }
   handleSubmit(e) {
     e.preventDefault();
-    //AXIOS makes able to make an AJAX work from clint to server///////////
+
     axios.post("/order", this.state).then(resp => {
+      console.log(res);
       if (resp.data.success) {
         this.setState({
-          isLoggedIn: true
+          name: ""
         });
       }
     });
@@ -81,6 +84,7 @@ class Order extends React.Component {
 
           <button type="submit">Order</button>
         </form>
+        <Footer />
       </div>
     );
   }

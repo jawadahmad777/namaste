@@ -1,5 +1,5 @@
 import React from "react";
-
+import Footer from "./footer";
 import axios from "./axios";
 import { BrowserRouter, Route } from "react-router-dom";
 
@@ -155,6 +155,7 @@ export default class Menu extends React.Component {
             </h2>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
